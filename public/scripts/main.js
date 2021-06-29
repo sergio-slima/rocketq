@@ -17,11 +17,17 @@ checkButtons.forEach(button => {
 const deleteButton = document.querySelectorAll(".actions a.delete")
 
 deleteButton.forEach(button => {
-    button.addEventListener("click", (event) => handleClick(event, check = false))
+    button.addEventListener("click", (event) => handleClick(event, false))
 })
 
 function handleClick(event, check = true) {
-    modalTitle.innerHTML = check ? "Marcar como lido" : "Excluir essa pergunta"
+    // event.
+    const text = check ? "Marcar como lida" : "Excluir"
+
+    modalTitle.innerHTML = `${text} esta pergunta`
+    modalDescription.innerHTML = `Tem certeza que deseja ${text.toLowerCase()} esta pergunta?`
+    modalButton.innerHTML = `Sim, ${text.toLowerCase()}`
+    check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
     //Abrir modal    
     modal.open()
 }
