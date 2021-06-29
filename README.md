@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./Public/Images/logo.svg" alt="RocketQ" height="100" width="100">  
+  <img src="/Public/images/logo.svg" alt="RocketQ" height="100" width="100">  
   <p>Rocket.Q</p>
 </h1>
 
